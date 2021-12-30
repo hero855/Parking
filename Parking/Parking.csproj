@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AB7E81B-5A71-4EEE-9439-6CCAEC11B9D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Parking</RootNamespace>
+    <AssemblyName>Parking</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\pastafarianism-solid-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\FormCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\FormCustomers.Designer.cs">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\FormNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\FormNewCustomer.Designer.cs">
+      <DependentUpon>FormNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloors.Designer.cs">
+      <DependentUpon>FormFloors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloorsDELETE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloorsDELETE.Designer.cs">
+      <DependentUpon>FormFloorsDELETE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloorsINSERT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloorsINSERT.Designer.cs">
+      <DependentUpon>FormFloorsINSERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloorsUPDATE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Floors\FormFloorsUPDATE.Designer.cs">
+      <DependentUpon>FormFloorsUPDATE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogIn\FormLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogIn\FormLogIn.Designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other\FormOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\FormOther.Designer.cs">
+      <DependentUpon>FormOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parking\FormParking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parking\FormParking.Designer.cs">
+      <DependentUpon>FormParking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPasses.Designer.cs">
+      <DependentUpon>FormPasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesFilterBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesFilterBy.Designer.cs">
+      <DependentUpon>FormPassesFilterBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesSortBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesSortBy.Designer.cs">
+      <DependentUpon>FormPassesSortBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Passes\FormSlotSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passes\FormSlotSelect.Designer.cs">
+      <DependentUpon>FormSlotSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Slots\FormSlots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Slots\FormSlots.Designer.cs">
+      <DependentUpon>FormSlots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TypesOfRent\FormTypesOfRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TypesOfRent\FormTypesOfRent.Designer.cs">
+      <DependentUpon>FormTypesOfRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="GradientPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GradientPanel.Designer.cs">
+      <DependentUpon>GradientPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs" />
+    <Compile Include="objects\Customer.cs" />
+    <Compile Include="objects\Floor.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesDELETE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesDELETE.Designer.cs">
+      <DependentUpon>FormPassesDELETE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesINSERT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesINSERT.Designer.cs">
+      <DependentUpon>FormPassesINSERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesUPDATE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passes\FormPassesUPDATE.Designer.cs">
+      <DependentUpon>FormPassesUPDATE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="objects\Pass.cs" />
+    <Compile Include="objects\TypeOfRent.cs" />
+    <Compile Include="objects\UnitOfMeasure.cs" />
+    <Compile Include="PassStatPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PassStatPanel.Designer.cs">
+      <DependentUpon>PassStatPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="objects\Slot.cs" />
+    <Compile Include="SqlFunctions.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\FormCustomers.resx">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\FormNewCustomer.resx">
+      <DependentUpon>FormNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Floors\FormFloors.resx">
+      <DependentUpon>FormFloors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Floors\FormFloorsDELETE.resx">
+      <DependentUpon>FormFloorsDELETE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Floors\FormFloorsINSERT.resx">
+      <DependentUpon>FormFloorsINSERT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Floors\FormFloorsUPDATE.resx">
+      <DependentUpon>FormFloorsUPDATE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogIn\FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\FormOther.resx">
+      <DependentUpon>FormOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parking\FormParking.resx">
+      <DependentUpon>FormParking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Passes\FormPasses.resx">
+      <DependentUpon>FormPasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Passes\FormPassesFilterBy.resx">
+      <DependentUpon>FormPassesFilterBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Passes\FormPassesSortBy.resx">
+      <DependentUpon>FormPassesSortBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Passes\FormSlotSelect.resx">
+      <DependentUpon>FormSlotSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Slots\FormSlots.resx">
+      <DependentUpon>FormSlots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TypesOfRent\FormTypesOfRent.resx">
+      <DependentUpon>FormTypesOfRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassStatPanel.resx">
+      <DependentUpon>PassStatPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\markup white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carUp dark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\markup dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carDown white.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carDown dark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carUp white.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pastafarianism-solid-removebg-preview.ico" />
+    <None Include="Resources\icon.bmp" />
+    <None Include="Resources\pastafarianism-solid-removebg-preview.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

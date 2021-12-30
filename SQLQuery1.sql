@@ -1,0 +1,6 @@
+﻿CREATE TABLE Sources 
+(
+	ID_Source INT PRIMARY KEY IDENTITY(1, 1) NOT NULL,
+	Source_Name NCHAR(50) NOT NULL,
+	Source_Address NCHAR(100) NOT NULL
+)
